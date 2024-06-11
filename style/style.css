@@ -65,6 +65,10 @@ header{
     color:blue
 }
 
+.menu-rolado ul li img::after{
+    background-image: url(/img/logo-agcont-preta.svg);
+}
+
 .nav nav{
     display: flex;
     justify-content: space-between;
