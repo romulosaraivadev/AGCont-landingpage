@@ -2,7 +2,7 @@ window.addEventListener('scroll', function() {
     var menu = document.querySelector('#menu');
     var scrollPosition = window.scrollY;
 
-    if (scrollPosition > 20) {
+    if (scrollPosition > 20 && window.innerWidth > 768) {
       menu.classList.add('menu-rolado');
     } else {
       menu.classList.remove('menu-rolado');
@@ -13,9 +13,9 @@ window.addEventListener('scroll', function() {
     var imagem = document.getElementById('logo-agcont');
     var posicao = window.scrollY;
 
-    if (posicao > 20) { // Altere o valor 500 para a posição em que deseja mudar a imagem
-      imagem.src = 'imagem2.jpg'; // Altere 'imagem2.jpg' para o caminho da nova imagem
+    if (posicao > 20 && window.innerWidth > 768) { 
+      imagem.src = 'img/logo-agcont-preta.svg'; 
     } else {
-      imagem.src = 'imagem1.jpg'; // Altere 'imagem1.jpg' para o caminho da imagem original
+      imagem.src = 'img/logo-agcont.svg'; 
     }
   });
