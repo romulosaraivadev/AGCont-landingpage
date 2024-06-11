@@ -1,0 +1,237 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+header{
+    position: relative;
+   
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.header{
+    background-image: url(../img/home.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 50px;
+    display: block;
+    unicode-bidi: isolate;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.imagem-fundo{
+    
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.nav{
+    padding-top: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: .5s;
+    
+}
+
+.menu-rolado{
+    background-color: #fff;
+    padding-top: 30px;
+    
+}
+
+.menu-rolado ul li a, .menu-rolado ul li img{
+    color:blue
+}
+
+.nav nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 50px;
+}
+
+.nav nav a img{
+    width: 110px;
+}
+
+.nav nav ul {
+    display: flex;  
+}
+
+.nav nav ul li{
+    
+    list-style-type: none;
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    
+}
+
+nav ul li a::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: darkblue;
+    margin: 0 auto;
+    transition: all 300ms;
+
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+
+}
+
+@media (max-width:768px){
+    .nav nav{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+.conteudo-central{
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:  auto;
+    /* padding-bottom: 00px; */
+    color: white;
+    gap: 40px;
+    height: 100vh;
+}
+
+.conteudo-central h1{
+    font-size: 3em;
+    text-transform: uppercase;
+    text-align: center;
+}
+.conteudo-central p{
+    max-width: 700px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width:768px) {
+    .conteudo-central h1{
+        font-size: 2em;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .conteudo-central p{
+        max-width: 700px;
+        text-align: center;
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+}
+
+    
+svg.rodape{
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+   
+    
+}
+
+div.conteudo-sobre{
+    position: r;
+    display: grid;
+    grid-template-columns: repeat(3, 400px) ;
+    grid-template-rows: 1fr 1fr;
+    
+}
+div.titulo-sobre{
+    grid-column: 1 / -1;
+}
+@media screen  and (max-width: 900px){
+    div.conteudo-sobre{
+        grid-template-columns: 1fr;
+    }
+}
+
+#sobre{
+    height: 100vh;
+}
+
+.titulo-sobre{
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.titulo-sobre-h2{
+    padding-bottom: 30px;
+    font-size: 40px;
+}
+
+.descricao-sobre{
+    padding-bottom: 60px;
+    width: 700px;
+    margin: 0 auto;
+}
+
+.sobre-conteudo svg{
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width:768px) {
+    .titulo-sobre{
+        max-width: 500px;
+        padding: 0 10px;
+        margin: 0 auto;
+        display: grid;
+        grid-column: 1fr;
+        
+    }
+
+    .grid{
+        grid-template-columns: 1fr;
+        padding: 0 50px;
+        gap: 40px;
+    }
+
+    .titulo-sobre-h2{
+        padding-bottom: 30px;
+        font-size: 40px;
+    }
+    
+    .descricao-sobre{
+        padding-bottom: 60px;
+        width:auto;
+        margin: 0 auto;
+    }
+}
