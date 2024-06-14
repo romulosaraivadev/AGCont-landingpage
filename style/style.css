@@ -9,6 +9,7 @@
 a{
     text-decoration: none;
     color: white;
+    text-transform: capitalize;
 }
 
 header{
@@ -112,17 +113,70 @@ nav ul li a:hover::after{
 
 }
 
+.menu-mobile{
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid black;
+    cursor: pointer;
+}
+
+.menu-mobile::before, .menu-mobile::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin-top: 5px;
+}
+
+/* .menu-mobile-wt{
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid white;
+    cursor: pointer;
+}
+
+.menu-mobile-wt::after, .menu-mobile-wt::before{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin-top: 5px;
+} */
+
 @media (max-width:768px){
-    .nav{
-    position: absolute; 
-    padding-top: 30px;
-    transition: .5s;
-    z-index: 99;
+   
+    .menu-mobile{
+        display: block;
+        z-index: 99;
+        
+        
     }
-    .nav nav{
-        display: flex;
+
+    .menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: darkblue;
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-in-out;
+
         flex-direction: column;
-        gap: 0px;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    /*Estilos ativos */
+    .nav-menu.active .menu{
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
     }
 }
 .conteudo-central{
@@ -132,7 +186,6 @@ nav ul li a:hover::after{
     align-items: center;
     justify-content: center;
     margin:  auto;
-    /* padding-bottom: 00px; */
     color: white;
     gap: 40px;
     height: 100vh;
