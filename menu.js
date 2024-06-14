@@ -1,14 +1,20 @@
 window.addEventListener('scroll', function() {
     var menu = document.querySelector('#menu');
-    var menuMobile = document.getElementById ('navlist-menu')
+    var menuMobile = document.querySelector ('.menu-mobile')
     var scrollPosition = window.scrollY;
 
     if (scrollPosition > 20/* && window.innerWidth > 768*/) {
-      menu.classList.add('menu-rolado');
+      menu.classList.add('menu-rolado')
+      menuMobile.classList.add('menu-mobile-wt')
+      menuMobile.classList.add('menu-mobile-wt::after')
+      menuMobile.classList.add('menu-mobile-wt::before')
       
     } else {
-      menu.classList.remove('menu-rolado');
-      m
+      menu.classList.remove('menu-rolado')
+      menuMobile.classList.remove('menu-mobile-wt')
+      menuMobile.classList.remove('menu-mobile-wt::after')
+      menuMobile.classList.remove('menu-mobile-wt::before')
+      
     }
   });
 

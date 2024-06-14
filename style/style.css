@@ -117,7 +117,7 @@ nav ul li a:hover::after{
     display: none;
     border: none;
     background: none;
-    border-top: 3px solid black;
+    border-top: 3px solid white;
     cursor: pointer;
 }
 
@@ -126,15 +126,15 @@ nav ul li a:hover::after{
     display: block;
     width: 30px;
     height: 3px;
-    background-color: black;
+    background-color: white;
     margin-top: 5px;
 }
 
-/* .menu-mobile-wt{
+.menu-mobile-wt{
     display: none;
     border: none;
     background: none;
-    border-top: 3px solid white;
+    border-top: 3px solid black;
     cursor: pointer;
 }
 
@@ -143,9 +143,9 @@ nav ul li a:hover::after{
     display: block;
     width: 30px;
     height: 3px;
-    background-color: white;
+    background-color: black;
     margin-top: 5px;
-} */
+}
 
 @media (max-width:768px){
    
@@ -177,6 +177,11 @@ nav ul li a:hover::after{
     .nav-menu.active .menu{
         clip-path: circle(1500px at 90% -15%);
         pointer-events: all;
+    }
+
+    .menu-rolado ul li a{
+        color:white;
+       
     }
 }
 .conteudo-central{
